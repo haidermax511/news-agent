@@ -47,6 +47,7 @@ jobs:
 
       - name: تشغيل الوكيل
         env:
+          PYTHONUNBUFFERED: "1"
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TG_TOKEN_PAGE_1: ${{ secrets.TG_TOKEN_PAGE_1 }}
           TG_TOKEN_PAGE_2: ${{ secrets.TG_TOKEN_PAGE_2 }}
