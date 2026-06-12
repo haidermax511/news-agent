@@ -3,37 +3,50 @@
 """
 
 import feedparser
+import requests
 from typing import List, Dict
 from datetime import datetime, timedelta
 
 
-def fetch_news_for_category(sources: List[Dict], limit: int = 10, hours_back: int = 6) -> List[Dict]:
-    """
-    جلب أخبار من قائمة مصادر RSS لتصنيف معين
-    
-    Args:
-        sources: قائمة بمصادر RSS [{"name": "...", "url": "..."}]
-        limit: العدد الأقصى للأخبار المُعادة
-        hours_back: جلب الأخبار من آخر X ساعة فقط
-    
-    Returns:
-        قائمة من الأخبار مرتبة حسب الأحدث
-    """
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/rss+xml, application/xml, text/xml, */*",
+    "Accept-Language": "ar,en;q=0.9",
+}
+
+
+def fetch_news_for_category(sources: List[Dict], limit: int = 10, hours_back: int = 48) -> List[Dict]:
+    """جلب أخبار من قائمة مصادر RSS"""
     all_news = []
     cutoff_time = datetime.now() - timedelta(hours=hours_back)
 
     for source in sources:
+        source_name = source.get("name", "?")
         try:
-            feed = feedparser.parse(source["url"])
+            print(f"  📡 محاولة: {source_name}")
+            response = requests.get(source["url"], headers=HEADERS, timeout=20)
+            print(f"     HTTP {response.status_code}, {len(response.content)} بايت")
+
+            if response.status_code != 200:
+                print(f"     ⚠️ كود غير 200، تخطي")
+                continue
+
+            feed = feedparser.parse(response.content)
+            entries_count = len(feed.entries)
+            print(f"     مدخلات في الـ feed: {entries_count}")
+
+            if entries_count == 0:
+                print(f"     ⚠️ feed فاضي")
+                continue
+
+            kept = 0
             for entry in feed.entries[:20]:
-                # محاولة قراءة وقت النشر
                 published = None
                 if hasattr(entry, "published_parsed") and entry.published_parsed:
                     published = datetime(*entry.published_parsed[:6])
                 elif hasattr(entry, "updated_parsed") and entry.updated_parsed:
                     published = datetime(*entry.updated_parsed[:6])
 
-                # تخطي الأخبار القديمة جداً (إن وُجد تاريخ)
                 if published and published < cutoff_time:
                     continue
 
@@ -42,21 +55,22 @@ def fetch_news_for_category(sources: List[Dict], limit: int = 10, hours_back: in
                     continue
 
                 summary = entry.get("summary", "") or entry.get("description", "")
-                # تنظيف بسيط للـ HTML
                 summary = _strip_html(summary)[:500]
 
                 all_news.append({
                     "title": title,
                     "summary": summary,
                     "link": entry.get("link", ""),
-                    "source": source["name"],
+                    "source": source_name,
                     "published": published.isoformat() if published else None,
                 })
+                kept += 1
+
+            print(f"     ✅ احتفظت بـ: {kept}")
         except Exception as e:
-            print(f"⚠️ خطأ في جلب من {source.get('name', '?')}: {e}")
+            print(f"  ❌ خطأ في {source_name}: {e}")
             continue
 
-    # ترتيب حسب الأحدث (الأخبار بدون تاريخ تذهب للأخير)
     all_news.sort(
         key=lambda x: x.get("published") or "0000",
         reverse=True,
