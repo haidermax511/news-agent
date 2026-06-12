@@ -1,0 +1,104 @@
+[
+  {
+    "name": "page_general",
+    "display_name": "أخبار العراق العاجلة",
+    "category": "general",
+    "template": "page1_general.png",
+    "append_source": true,
+
+    "_comment_facebook": "احذف هذا الاستار وأضف معرفات صفحتك بعد موافقة Meta على تطبيقك",
+    "facebook_page_id": "REPLACE_WITH_YOUR_FB_PAGE_ID_1",
+    "instagram_account_id": "REPLACE_WITH_YOUR_IG_BUSINESS_ID_1",
+    "facebook_token_env": "FB_TOKEN_PAGE_1",
+
+    "_comment_telegram": "تيليغرام أسهل بكثير - يشتغل فوراً. أنشئ بوت من @BotFather وأضفه أدمن في القناة",
+    "telegram_channel_id": "@your_general_channel",
+    "telegram_token_env": "TG_TOKEN_PAGE_1",
+
+    "design": {
+      "title_position": [540, 540],
+      "title_size": 60,
+      "title_color": "#FFFFFF",
+      "title_max_width": 900,
+      "title_align": "center",
+      "subtitle_position": [540, 720],
+      "subtitle_size": 32,
+      "subtitle_color": "#FFD700"
+    }
+  },
+  {
+    "name": "page_politics",
+    "display_name": "السياسة العراقية",
+    "category": "politics",
+    "template": "page2_politics.png",
+    "append_source": true,
+
+    "facebook_page_id": "REPLACE_WITH_YOUR_FB_PAGE_ID_2",
+    "instagram_account_id": "REPLACE_WITH_YOUR_IG_BUSINESS_ID_2",
+    "facebook_token_env": "FB_TOKEN_PAGE_2",
+
+    "telegram_channel_id": "@your_politics_channel",
+    "telegram_token_env": "TG_TOKEN_PAGE_2",
+
+    "design": {
+      "title_position": [540, 500],
+      "title_size": 58,
+      "title_color": "#FFFFFF",
+      "title_max_width": 900,
+      "title_align": "center",
+      "subtitle_position": [540, 700],
+      "subtitle_size": 30,
+      "subtitle_color": "#E63946"
+    }
+  },
+  {
+    "name": "page_sports",
+    "display_name": "الرياضة العراقية",
+    "category": "sports",
+    "template": "page3_sports.png",
+    "append_source": true,
+
+    "facebook_page_id": "REPLACE_WITH_YOUR_FB_PAGE_ID_3",
+    "instagram_account_id": "REPLACE_WITH_YOUR_IG_BUSINESS_ID_3",
+    "facebook_token_env": "FB_TOKEN_PAGE_3",
+
+    "telegram_channel_id": "@your_sports_channel",
+    "telegram_token_env": "TG_TOKEN_PAGE_3",
+
+    "design": {
+      "title_position": [540, 540],
+      "title_size": 62,
+      "title_color": "#FFFFFF",
+      "title_max_width": 900,
+      "title_align": "center",
+      "subtitle_position": [540, 720],
+      "subtitle_size": 34,
+      "subtitle_color": "#00FF87"
+    }
+  },
+  {
+    "name": "page_economy",
+    "display_name": "الاقتصاد المحلي",
+    "category": "economy",
+    "template": "page4_economy.png",
+    "append_source": true,
+
+    "facebook_page_id": "REPLACE_WITH_YOUR_FB_PAGE_ID_4",
+    "instagram_account_id": "REPLACE_WITH_YOUR_IG_BUSINESS_ID_4",
+    "facebook_token_env": "FB_TOKEN_PAGE_4",
+
+    "telegram_channel_id": "@your_economy_channel",
+    "telegram_token_env": "TG_TOKEN_PAGE_4",
+
+    "design": {
+      "title_position": [540, 520],
+      "title_size": 56,
+      "title_color": "#FFFFFF",
+      "title_max_width": 900,
+      "title_align": "center",
+      "subtitle_position": [540, 700],
+      "subtitle_size": 32,
+      "subtitle_color": "#1E90FF"
+    }
+  }
+]

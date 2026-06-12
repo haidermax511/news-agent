@@ -1,0 +1,88 @@
+{
+  "_README": "روابط RSS قد تتغير. شغّل 'python verify.py --rss' للتأكد. استبدل الروابط غير العاملة من مواقع المصادر مباشرة (ابحث عن 'RSS' في footer).",
+
+  "general": [
+    {
+      "name": "شفق نيوز",
+      "url": "https://shafaq.com/ar/rss.xml"
+    },
+    {
+      "name": "السومرية - أخبار العراق",
+      "url": "https://www.alsumaria.tv/Rss/iraq-latest.xml"
+    },
+    {
+      "name": "ناس نيوز",
+      "url": "https://www.nasnews.com/feed"
+    },
+    {
+      "name": "الشرقية",
+      "url": "https://www.alsharqiya.com/ar/feed"
+    },
+    {
+      "name": "كتابات",
+      "url": "https://kitabat.com/feed"
+    },
+    {
+      "name": "صوت العراق",
+      "url": "https://www.sotaliraq.com/feed"
+    }
+  ],
+  "politics": [
+    {
+      "name": "شفق - سياسة",
+      "url": "https://shafaq.com/ar/politics/rss"
+    },
+    {
+      "name": "السومرية - سياسة",
+      "url": "https://www.alsumaria.tv/Rss/politics-latest.xml"
+    },
+    {
+      "name": "ناس - سياسة",
+      "url": "https://www.nasnews.com/category/politics/feed"
+    },
+    {
+      "name": "العراق نيوز",
+      "url": "https://aliraqnews.com/feed"
+    },
+    {
+      "name": "المدى",
+      "url": "https://almadapaper.net/feed"
+    }
+  ],
+  "sports": [
+    {
+      "name": "السومرية - رياضة",
+      "url": "https://www.alsumaria.tv/Rss/sport-latest.xml"
+    },
+    {
+      "name": "شفق - رياضة",
+      "url": "https://shafaq.com/ar/sports/rss"
+    },
+    {
+      "name": "ناس - رياضة",
+      "url": "https://www.nasnews.com/category/sports/feed"
+    },
+    {
+      "name": "كووورة",
+      "url": "https://www.kooora.com/rss/iraq.xml"
+    }
+  ],
+  "economy": [
+    {
+      "name": "شفق - اقتصاد",
+      "url": "https://shafaq.com/ar/economy/rss"
+    },
+    {
+      "name": "السومرية - اقتصاد",
+      "url": "https://www.alsumaria.tv/Rss/economy-latest.xml"
+    },
+    {
+      "name": "ناس - اقتصاد",
+      "url": "https://www.nasnews.com/category/economy/feed"
+    },
+    {
+      "name": "المدى - اقتصاد",
+      "url": "https://almadapaper.net/category/economy/feed"
+    }
+  ]
+}
