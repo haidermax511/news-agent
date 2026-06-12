@@ -1,88 +1,48 @@
 {
-  "_README": "روابط RSS قد تتغير. شغّل 'python verify.py --rss' للتأكد. استبدل الروابط غير العاملة من مواقع المصادر مباشرة (ابحث عن 'RSS' في footer).",
+  "_README": "مصادر مختبرة لـ Google News عربي",
 
   "general": [
     {
-      "name": "شفق نيوز",
-      "url": "https://shafaq.com/ar/rss.xml"
+      "name": "Google News - أخبار العراق",
+      "url": "https://news.google.com/rss/search?q=العراق&hl=ar&gl=IQ&ceid=IQ:ar"
     },
     {
-      "name": "السومرية - أخبار العراق",
-      "url": "https://www.alsumaria.tv/Rss/iraq-latest.xml"
+      "name": "Google News - أخبار عاجلة العراق",
+      "url": "https://news.google.com/rss/search?q=أخبار+العراق+عاجل&hl=ar&gl=IQ&ceid=IQ:ar"
     },
     {
-      "name": "ناس نيوز",
-      "url": "https://www.nasnews.com/feed"
-    },
-    {
-      "name": "الشرقية",
-      "url": "https://www.alsharqiya.com/ar/feed"
-    },
-    {
-      "name": "كتابات",
-      "url": "https://kitabat.com/feed"
-    },
-    {
-      "name": "صوت العراق",
-      "url": "https://www.sotaliraq.com/feed"
+      "name": "Google News - بغداد",
+      "url": "https://news.google.com/rss/search?q=بغداد&hl=ar&gl=IQ&ceid=IQ:ar"
     }
   ],
   "politics": [
     {
-      "name": "شفق - سياسة",
-      "url": "https://shafaq.com/ar/politics/rss"
+      "name": "Google News - سياسة العراق",
+      "url": "https://news.google.com/rss/search?q=سياسة+العراق&hl=ar&gl=IQ&ceid=IQ:ar"
     },
     {
-      "name": "السومرية - سياسة",
-      "url": "https://www.alsumaria.tv/Rss/politics-latest.xml"
-    },
-    {
-      "name": "ناس - سياسة",
-      "url": "https://www.nasnews.com/category/politics/feed"
-    },
-    {
-      "name": "العراق نيوز",
-      "url": "https://aliraqnews.com/feed"
-    },
-    {
-      "name": "المدى",
-      "url": "https://almadapaper.net/feed"
+      "name": "Google News - الحكومة العراقية",
+      "url": "https://news.google.com/rss/search?q=الحكومة+العراقية&hl=ar&gl=IQ&ceid=IQ:ar"
     }
   ],
   "sports": [
     {
-      "name": "السومرية - رياضة",
-      "url": "https://www.alsumaria.tv/Rss/sport-latest.xml"
+      "name": "Google News - رياضة العراق",
+      "url": "https://news.google.com/rss/search?q=رياضة+العراق&hl=ar&gl=IQ&ceid=IQ:ar"
     },
     {
-      "name": "شفق - رياضة",
-      "url": "https://shafaq.com/ar/sports/rss"
-    },
-    {
-      "name": "ناس - رياضة",
-      "url": "https://www.nasnews.com/category/sports/feed"
-    },
-    {
-      "name": "كووورة",
-      "url": "https://www.kooora.com/rss/iraq.xml"
+      "name": "Google News - منتخب العراق",
+      "url": "https://news.google.com/rss/search?q=منتخب+العراق&hl=ar&gl=IQ&ceid=IQ:ar"
     }
   ],
   "economy": [
     {
-      "name": "شفق - اقتصاد",
-      "url": "https://shafaq.com/ar/economy/rss"
+      "name": "Google News - اقتصاد العراق",
+      "url": "https://news.google.com/rss/search?q=اقتصاد+العراق&hl=ar&gl=IQ&ceid=IQ:ar"
     },
     {
-      "name": "السومرية - اقتصاد",
-      "url": "https://www.alsumaria.tv/Rss/economy-latest.xml"
-    },
-    {
-      "name": "ناس - اقتصاد",
-      "url": "https://www.nasnews.com/category/economy/feed"
-    },
-    {
-      "name": "المدى - اقتصاد",
-      "url": "https://almadapaper.net/category/economy/feed"
+      "name": "Google News - النفط العراقي",
+      "url": "https://news.google.com/rss/search?q=النفط+العراقي&hl=ar&gl=IQ&ceid=IQ:ar"
     }
   ]
 }
