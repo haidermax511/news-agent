@@ -1,0 +1,84 @@
+name: تشغيل وكيل الأخبار العراقية
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "تشغيل تجريبي بدون نشر"
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+      page:
+        description: "اسم صفحة محددة (اتركه فارغاً للكل)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-agent
+  cancel-in-progress: false
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: استنساخ الكود
+        uses: actions/checkout@v4
+
+      - name: تهيئة Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: تثبيت المتطلبات
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: تشغيل الوكيل
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TG_TOKEN_PAGE_1: ${{ secrets.TG_TOKEN_PAGE_1 }}
+          TG_TOKEN_PAGE_2: ${{ secrets.TG_TOKEN_PAGE_2 }}
+          TG_TOKEN_PAGE_3: ${{ secrets.TG_TOKEN_PAGE_3 }}
+          TG_TOKEN_PAGE_4: ${{ secrets.TG_TOKEN_PAGE_4 }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            EXTRA_ARGS="--dry-run"
+          else
+            EXTRA_ARGS=""
+          fi
+          if [ -n "${{ inputs.page }}" ]; then
+            EXTRA_ARGS="$EXTRA_ARGS --page=${{ inputs.page }}"
+          fi
+          python main.py $EXTRA_ARGS
+
+      - name: حفظ سجل المنشورات
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "News Agent Bot"
+          git add data/posted_news.json data/logs/ 2>/dev/null || true
+          if ! git diff --staged --quiet; then
+            git commit -m "تحديث سجل المنشورات"
+            git push
+          fi
+
+      - name: حفظ الصور للتشخيص
+        if: failure() || inputs.dry_run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated-images-${{ github.run_id }}
+          path: data/*.png
+          retention-days: 3
+          if-no-files-found: ignore
