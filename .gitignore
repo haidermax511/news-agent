@@ -1,0 +1,27 @@
+# بيئة Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+
+# ملفات بيئة (لا ترفع التوكنات!)
+.env
+.env.local
+
+# ملفات الإعدادات الفعلية (احتفظ بـ .example في الريبو)
+config/pages.json
+
+# ملفات مؤقتة
+data/*_latest.png
+data/.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# نظام التشغيل
+.DS_Store
+Thumbs.db
