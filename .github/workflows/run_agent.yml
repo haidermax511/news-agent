@@ -30,6 +30,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
+    env:
+      PYTHONUNBUFFERED: "1"
+      PYTHONIOENCODING: "utf-8"
+      LANG: "C.UTF-8"
+      LC_ALL: "C.UTF-8"
+
     steps:
       - name: استنساخ الكود
         uses: actions/checkout@v4
@@ -47,7 +53,6 @@ jobs:
 
       - name: تشغيل الوكيل
         env:
-          PYTHONUNBUFFERED: "1"
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           TG_TOKEN_PAGE_1: ${{ secrets.TG_TOKEN_PAGE_1 }}
           TG_TOKEN_PAGE_2: ${{ secrets.TG_TOKEN_PAGE_2 }}
