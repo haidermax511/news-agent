@@ -1,0 +1,21 @@
+[
+  {
+    "name": "page_test",
+    "display_name": "أخبار العراق العاجلة - اختبار",
+    "category": "general",
+    "template": "page1_general.png",
+    "append_source": true,
+    "telegram_channel_id": "@maxpro511",
+    "telegram_token_env": "TG_TOKEN_PAGE_1",
+    "design": {
+      "title_position": [540, 540],
+      "title_size": 60,
+      "title_color": "#FFFFFF",
+      "title_max_width": 900,
+      "title_align": "center",
+      "subtitle_position": [540, 720],
+      "subtitle_size": 32,
+      "subtitle_color": "#FFD700"
+    }
+  }
+]
