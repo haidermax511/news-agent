@@ -4,9 +4,12 @@
 
 import feedparser
 import requests
+import logging
 from typing import List, Dict
 from datetime import datetime, timedelta
 
+
+log = logging.getLogger("news_agent")
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -17,26 +20,35 @@ HEADERS = {
 
 def fetch_news_for_category(sources: List[Dict], limit: int = 10, hours_back: int = 48) -> List[Dict]:
     """جلب أخبار من قائمة مصادر RSS"""
+    log.info(f"🔍 fetch_news_for_category تم استدعاؤها بـ {len(sources)} مصدر")
+    
     all_news = []
     cutoff_time = datetime.now() - timedelta(hours=hours_back)
 
+    if not sources:
+        log.warning("⚠️ القائمة فارغة - لا مصادر")
+        return []
+
     for source in sources:
         source_name = source.get("name", "?")
+        source_url = source.get("url", "")
         try:
-            print(f"  📡 محاولة: {source_name}")
-            response = requests.get(source["url"], headers=HEADERS, timeout=20)
-            print(f"     HTTP {response.status_code}, {len(response.content)} بايت")
+            log.info(f"  📡 محاولة: {source_name}")
+            log.info(f"     URL: {source_url[:80]}")
+            
+            response = requests.get(source_url, headers=HEADERS, timeout=20)
+            log.info(f"     HTTP {response.status_code}, {len(response.content)} بايت")
 
             if response.status_code != 200:
-                print(f"     ⚠️ كود غير 200، تخطي")
+                log.warning(f"     ⚠️ كود غير 200، تخطي")
                 continue
 
             feed = feedparser.parse(response.content)
             entries_count = len(feed.entries)
-            print(f"     مدخلات في الـ feed: {entries_count}")
+            log.info(f"     مدخلات في الـ feed: {entries_count}")
 
             if entries_count == 0:
-                print(f"     ⚠️ feed فاضي")
+                log.warning(f"     ⚠️ feed فاضي")
                 continue
 
             kept = 0
@@ -66,9 +78,9 @@ def fetch_news_for_category(sources: List[Dict], limit: int = 10, hours_back: in
                 })
                 kept += 1
 
-            print(f"     ✅ احتفظت بـ: {kept}")
+            log.info(f"     ✅ احتفظت بـ: {kept}")
         except Exception as e:
-            print(f"  ❌ خطأ في {source_name}: {e}")
+            log.error(f"  ❌ خطأ في {source_name}: {e}")
             continue
 
     all_news.sort(
@@ -76,6 +88,7 @@ def fetch_news_for_category(sources: List[Dict], limit: int = 10, hours_back: in
         reverse=True,
     )
 
+    log.info(f"🎯 إجمالي ما تم جلبه: {len(all_news)} خبر")
     return all_news[:limit]
 
 
