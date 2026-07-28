@@ -60,3 +60,34 @@
 2026-07-28 04:51:37 | INFO | news_agent | 📊 الملخص: 2026-07-28T04:51:37.242158
 2026-07-28 04:51:37 | INFO | news_agent | ══════════════════════════════════════════════════
 2026-07-28 04:51:37 | INFO | news_agent | ⏭️ page_test
+2026-07-28 07:30:08 | INFO | news_agent | 🚀 بدء تشغيل وكيل الأخبار العراقية
+2026-07-28 07:30:08 | INFO | news_agent | 
+══════════════════════════════════════════════════
+2026-07-28 07:30:08 | INFO | news_agent | 📄 أخبار العراق العاجلة - اختبار (general)
+2026-07-28 07:30:08 | INFO | news_agent | ══════════════════════════════════════════════════
+2026-07-28 07:30:08 | INFO | news_agent | 🔍 بدء جلب الأخبار من 3 مصدر/مصادر
+2026-07-28 07:30:08 | INFO | news_agent |   [1] 📡 محاولة جلب من: Google News - أخبار العراق
+2026-07-28 07:30:08 | INFO | news_agent |       URL: https://news.google.com/rss/search?q=العراق&hl=ar&gl=IQ&ceid=IQ:ar
+2026-07-28 07:30:09 | INFO | news_agent |       HTTP 200 | حجم: 287766 بايت
+2026-07-28 07:30:09 | INFO | news_agent |       📰 مدخلات في الـ feed: 103
+2026-07-28 07:30:09 | INFO | news_agent |       ✅ احتفظت بـ 19 خبر من هذا المصدر
+2026-07-28 07:30:09 | INFO | news_agent |   [2] 📡 محاولة جلب من: Google News - أخبار عاجلة العراق
+2026-07-28 07:30:09 | INFO | news_agent |       URL: https://news.google.com/rss/search?q=أخبار+العراق+عاجل&hl=ar&gl=IQ&ceid=IQ:ar
+2026-07-28 07:30:09 | INFO | news_agent |       HTTP 200 | حجم: 212517 بايت
+2026-07-28 07:30:09 | INFO | news_agent |       📰 مدخلات في الـ feed: 79
+2026-07-28 07:30:09 | INFO | news_agent |       ✅ احتفظت بـ 0 خبر من هذا المصدر
+2026-07-28 07:30:09 | INFO | news_agent |   [3] 📡 محاولة جلب من: Google News - بغداد
+2026-07-28 07:30:09 | INFO | news_agent |       URL: https://news.google.com/rss/search?q=بغداد&hl=ar&gl=IQ&ceid=IQ:ar
+2026-07-28 07:30:10 | INFO | news_agent |       HTTP 200 | حجم: 212035 بايت
+2026-07-28 07:30:10 | INFO | news_agent |       📰 مدخلات في الـ feed: 102
+2026-07-28 07:30:10 | INFO | news_agent |       ✅ احتفظت بـ 20 خبر من هذا المصدر
+2026-07-28 07:30:10 | INFO | news_agent | 🎯 إجمالي ما تم جمعه: 39 خبر
+2026-07-28 07:30:10 | INFO | news_agent | 📰 جُلبت 15 أخبار
+2026-07-28 07:30:10 | INFO | news_agent | 📌 المختار: إزالة صورة خامنئي في كربلاء تشعل جدلا سياسيا بالعراق - سكاي نيوز عربية...
+2026-07-28 07:30:10 | INFO | news_agent |    المصدر: Google News - أخبار العراق
+2026-07-28 07:30:10 | ERROR | news_agent | فشلت المعالجة بالذكاء الاصطناعي: 404 models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+2026-07-28 07:30:10 | INFO | news_agent | 
+══════════════════════════════════════════════════
+2026-07-28 07:30:10 | INFO | news_agent | 📊 الملخص: 2026-07-28T07:30:10.855331
+2026-07-28 07:30:10 | INFO | news_agent | ══════════════════════════════════════════════════
+2026-07-28 07:30:10 | INFO | news_agent | ⏭️ page_test
