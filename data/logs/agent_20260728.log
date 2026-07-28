@@ -307,3 +307,34 @@
 2026-07-28 21:56:12 | INFO | news_agent | 📊 الملخص: 2026-07-28T21:56:12.031796
 2026-07-28 21:56:12 | INFO | news_agent | ══════════════════════════════════════════════════
 2026-07-28 21:56:12 | INFO | news_agent | ⏭️ page_test
+2026-07-28 22:50:19 | INFO | news_agent | 🚀 بدء تشغيل وكيل الأخبار العراقية
+2026-07-28 22:50:19 | INFO | news_agent | 
+══════════════════════════════════════════════════
+2026-07-28 22:50:19 | INFO | news_agent | 📄 أخبار العراق العاجلة - اختبار (general)
+2026-07-28 22:50:19 | INFO | news_agent | ══════════════════════════════════════════════════
+2026-07-28 22:50:19 | INFO | news_agent | 🔍 بدء جلب الأخبار من 3 مصدر/مصادر
+2026-07-28 22:50:19 | INFO | news_agent |   [1] 📡 محاولة جلب من: Google News - أخبار العراق
+2026-07-28 22:50:19 | INFO | news_agent |       URL: https://news.google.com/rss/search?q=العراق&hl=ar&gl=IQ&ceid=IQ:ar
+2026-07-28 22:50:20 | INFO | news_agent |       HTTP 200 | حجم: 286458 بايت
+2026-07-28 22:50:20 | INFO | news_agent |       📰 مدخلات في الـ feed: 100
+2026-07-28 22:50:20 | INFO | news_agent |       ✅ احتفظت بـ 19 خبر من هذا المصدر
+2026-07-28 22:50:20 | INFO | news_agent |   [2] 📡 محاولة جلب من: Google News - أخبار عاجلة العراق
+2026-07-28 22:50:20 | INFO | news_agent |       URL: https://news.google.com/rss/search?q=أخبار+العراق+عاجل&hl=ar&gl=IQ&ceid=IQ:ar
+2026-07-28 22:50:21 | INFO | news_agent |       HTTP 200 | حجم: 210524 بايت
+2026-07-28 22:50:21 | INFO | news_agent |       📰 مدخلات في الـ feed: 79
+2026-07-28 22:50:21 | INFO | news_agent |       ✅ احتفظت بـ 1 خبر من هذا المصدر
+2026-07-28 22:50:21 | INFO | news_agent |   [3] 📡 محاولة جلب من: Google News - بغداد
+2026-07-28 22:50:21 | INFO | news_agent |       URL: https://news.google.com/rss/search?q=بغداد&hl=ar&gl=IQ&ceid=IQ:ar
+2026-07-28 22:50:22 | INFO | news_agent |       HTTP 200 | حجم: 233620 بايت
+2026-07-28 22:50:22 | INFO | news_agent |       📰 مدخلات في الـ feed: 102
+2026-07-28 22:50:22 | INFO | news_agent |       ✅ احتفظت بـ 20 خبر من هذا المصدر
+2026-07-28 22:50:22 | INFO | news_agent | 🎯 إجمالي ما تم جمعه: 40 خبر
+2026-07-28 22:50:22 | INFO | news_agent | 📰 جُلبت 15 أخبار
+2026-07-28 22:50:22 | INFO | news_agent | 📌 المختار: "خلايا المسيّرات".. هل تنجح بغداد في فك عقدة المناطق الرخوة؟ - سكاي ني...
+2026-07-28 22:50:22 | INFO | news_agent |    المصدر: Google News - أخبار العراق
+2026-07-28 22:50:22 | ERROR | news_agent | فشلت المعالجة بالذكاء الاصطناعي: 404 models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+2026-07-28 22:50:22 | INFO | news_agent | 
+══════════════════════════════════════════════════
+2026-07-28 22:50:22 | INFO | news_agent | 📊 الملخص: 2026-07-28T22:50:22.235620
+2026-07-28 22:50:22 | INFO | news_agent | ══════════════════════════════════════════════════
+2026-07-28 22:50:22 | INFO | news_agent | ⏭️ page_test
