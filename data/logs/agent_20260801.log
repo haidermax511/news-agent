@@ -401,3 +401,33 @@
 2026-08-01 21:42:19 | INFO | news_agent | 📊 الملخص: 2026-08-01T21:42:19.344381
 2026-08-01 21:42:19 | INFO | news_agent | ══════════════════════════════════════════════════
 2026-08-01 21:42:19 | INFO | news_agent | ⏭️ page_test
+2026-08-01 22:42:23 | INFO | news_agent | 🚀 بدء تشغيل وكيل الأخبار العراقية
+2026-08-01 22:42:23 | INFO | news_agent | 
+══════════════════════════════════════════════════
+2026-08-01 22:42:23 | INFO | news_agent | 📄 أخبار العراق العاجلة - اختبار (general)
+2026-08-01 22:42:23 | INFO | news_agent | ══════════════════════════════════════════════════
+2026-08-01 22:42:23 | INFO | news_agent | 🔍 بدء جلب الأخبار من 3 مصدر/مصادر
+2026-08-01 22:42:23 | INFO | news_agent |   [1] 📡 محاولة جلب من: Google News - أخبار العراق
+2026-08-01 22:42:23 | INFO | news_agent |       URL: https://news.google.com/rss/search?q=العراق&hl=ar&gl=IQ&ceid=IQ:ar
+2026-08-01 22:42:29 | INFO | news_agent |       HTTP 503 | حجم: 1103 بايت
+2026-08-01 22:42:29 | WARNING | news_agent |       ⚠️ كود غير 200، تخطي
+2026-08-01 22:42:29 | INFO | news_agent |   [2] 📡 محاولة جلب من: Google News - أخبار عاجلة العراق
+2026-08-01 22:42:29 | INFO | news_agent |       URL: https://news.google.com/rss/search?q=أخبار+العراق+عاجل&hl=ar&gl=IQ&ceid=IQ:ar
+2026-08-01 22:42:38 | INFO | news_agent |       HTTP 503 | حجم: 1103 بايت
+2026-08-01 22:42:38 | WARNING | news_agent |       ⚠️ كود غير 200، تخطي
+2026-08-01 22:42:38 | INFO | news_agent |   [3] 📡 محاولة جلب من: Google News - بغداد
+2026-08-01 22:42:38 | INFO | news_agent |       URL: https://news.google.com/rss/search?q=بغداد&hl=ar&gl=IQ&ceid=IQ:ar
+2026-08-01 22:42:43 | INFO | news_agent |       HTTP 503 | حجم: 1103 بايت
+2026-08-01 22:42:43 | WARNING | news_agent |       ⚠️ كود غير 200، تخطي
+2026-08-01 22:42:43 | INFO | news_agent | 🎯 إجمالي ما تم جمعه: 0 خبر
+2026-08-01 22:42:43 | WARNING | news_agent | ⚠️ جميع المصادر فشلت أو لا تحتوي أخبار حديثة
+2026-08-01 22:42:43 | INFO | news_agent | 🔄 استخدام خبر اختباري للتحقق من باقي النظام
+2026-08-01 22:42:43 | INFO | news_agent | 📰 جُلبت 1 أخبار
+2026-08-01 22:42:43 | INFO | news_agent | 📌 المختار: اختبار النظام في الساعة 22:42 - الوكيل يعمل...
+2026-08-01 22:42:43 | INFO | news_agent |    المصدر: نظام الاختبار
+2026-08-01 22:42:43 | ERROR | news_agent | فشلت المعالجة بالذكاء الاصطناعي: 404 models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+2026-08-01 22:42:43 | INFO | news_agent | 
+══════════════════════════════════════════════════
+2026-08-01 22:42:43 | INFO | news_agent | 📊 الملخص: 2026-08-01T22:42:43.424753
+2026-08-01 22:42:43 | INFO | news_agent | ══════════════════════════════════════════════════
+2026-08-01 22:42:43 | INFO | news_agent | ⏭️ page_test
