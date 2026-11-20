@@ -60,3 +60,32 @@
 2026-11-20 14:30:19 | INFO | news_agent | 📊 الملخص: 2026-11-20T14:30:19.749938
 2026-11-20 14:30:19 | INFO | news_agent | ══════════════════════════════════════════════════
 2026-11-20 14:30:19 | INFO | news_agent | ⏭️ page_test
+2026-11-20 22:01:31 | INFO | news_agent | 🚀 بدء تشغيل وكيل الأخبار العراقية
+2026-11-20 22:01:31 | INFO | news_agent | 
+══════════════════════════════════════════════════
+2026-11-20 22:01:31 | INFO | news_agent | 📄 أخبار العراق العاجلة - اختبار (general)
+2026-11-20 22:01:31 | INFO | news_agent | ══════════════════════════════════════════════════
+2026-11-20 22:01:31 | INFO | news_agent | 🔍 بدء جلب الأخبار من 3 مصدر/مصادر
+2026-11-20 22:01:31 | INFO | news_agent |   [1] 📡 محاولة جلب من: Google News - أخبار العراق
+2026-11-20 22:01:31 | INFO | news_agent |       URL: https://news.google.com/rss/search?q=العراق&hl=ar&gl=IQ&ceid=IQ:ar
+2026-11-20 22:01:32 | INFO | news_agent |       HTTP 429 | حجم: 1103 بايت
+2026-11-20 22:01:32 | WARNING | news_agent |       ⚠️ كود غير 200، تخطي
+2026-11-20 22:01:32 | INFO | news_agent |   [2] 📡 محاولة جلب من: Google News - أخبار عاجلة العراق
+2026-11-20 22:01:32 | INFO | news_agent |       URL: https://news.google.com/rss/search?q=أخبار+العراق+عاجل&hl=ar&gl=IQ&ceid=IQ:ar
+2026-11-20 22:01:32 | INFO | news_agent |       HTTP 200 | حجم: 86769 بايت
+2026-11-20 22:01:32 | INFO | news_agent |       📰 مدخلات في الـ feed: 35
+2026-11-20 22:01:32 | INFO | news_agent |       ✅ احتفظت بـ 1 خبر من هذا المصدر
+2026-11-20 22:01:32 | INFO | news_agent |   [3] 📡 محاولة جلب من: Google News - بغداد
+2026-11-20 22:01:32 | INFO | news_agent |       URL: https://news.google.com/rss/search?q=بغداد&hl=ar&gl=IQ&ceid=IQ:ar
+2026-11-20 22:01:33 | INFO | news_agent |       HTTP 429 | حجم: 1103 بايت
+2026-11-20 22:01:33 | WARNING | news_agent |       ⚠️ كود غير 200، تخطي
+2026-11-20 22:01:33 | INFO | news_agent | 🎯 إجمالي ما تم جمعه: 1 خبر
+2026-11-20 22:01:33 | INFO | news_agent | 📰 جُلبت 1 أخبار
+2026-11-20 22:01:33 | INFO | news_agent | 📌 المختار: #عاجل رئيس وزراء العراق يطالب القوات الأمنية في جرف الصخر بضبط النفس -...
+2026-11-20 22:01:33 | INFO | news_agent |    المصدر: Google News - أخبار عاجلة العراق
+2026-11-20 22:01:33 | ERROR | news_agent | فشلت المعالجة بالذكاء الاصطناعي: 404 models/gemini-2.0-flash-exp is not found for API version v1beta, or is not supported for generateContent. Call ModelService.ListModels to see the list of available models and their supported methods.
+2026-11-20 22:01:33 | INFO | news_agent | 
+══════════════════════════════════════════════════
+2026-11-20 22:01:33 | INFO | news_agent | 📊 الملخص: 2026-11-20T22:01:33.460920
+2026-11-20 22:01:33 | INFO | news_agent | ══════════════════════════════════════════════════
+2026-11-20 22:01:33 | INFO | news_agent | ⏭️ page_test
